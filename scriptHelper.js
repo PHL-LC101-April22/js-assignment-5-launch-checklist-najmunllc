@@ -3,41 +3,34 @@ require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
-   /*
-                <h2>Mission Destination</h2>
-                <ol>
-                    <li>Name: </li>
-                    <li>Diameter: </li>
-                    <li>Star: ${star}</li>
-                    <li>Distance from Earth: </li>
-                    <li>Number of Moons: </li>
-                </ol>
-                <img src="">
-   */
-}
+  
+   document.getElementById("missionTarget").innerHTML = 
+                <><h2>Mission Destination</h2><ol>
+           <li>Name: ${json[index].name}</li>
+           <li>Diameter: ${json[index].diameter}</li>
+           <li>Star: ${star}</li>
+           <li>Distance from Earth: ${json[index].distance}</li>
+           <li>Number of Moons: ${json[index].moons}</li>
+       </ol><img src="Moon_image.jpeg">
 
-function validateInput(testInput) {
-   
-}
+               }
 
-function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   
-}
+               function validateInput(testInput)
 
-async function myFetch() {
-    let planetsReturned;
+               function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
 
-    planetsReturned = await fetch().then( function(response) {
-        });
+               async function myFetch() {let} planetsReturned;
 
-    return planetsReturned;
-}
+               planetsReturned = await fetch().then(function(response) );
 
-function pickPlanet(planets) {
-}
+               return planetsReturned;
+               }
 
-module.exports.addDestinationInfo = addDestinationInfo;
-module.exports.validateInput = validateInput;
-module.exports.formSubmission = formSubmission;
-module.exports.pickPlanet = pickPlanet; 
-module.exports.myFetch = myFetch;
+               function pickPlanet(planets)
+
+               module.exports.addDestinationInfo = addDestinationInfo;
+               module.exports.validateInput = validateInput;
+               module.exports.formSubmission = formSubmission;
+               module.exports.pickPlanet = pickPlanet;
+               module.exports.myFetch = myFetch;
+           </></>
