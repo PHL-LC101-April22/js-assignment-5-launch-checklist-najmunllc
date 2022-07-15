@@ -114,6 +114,7 @@ window.addEventListener("load", function() {
         if (fuelReady && cargoReady && fuelCheck) {
             document.getElementById('launchStatus').innerText = 'Shuttle is ready for trip!';
             document.getElementById('launchStatus').style.color="green";
+    
                     event.preventDefault();
            }
          });
