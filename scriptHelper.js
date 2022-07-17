@@ -5,7 +5,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
    // Here is the HTML formatting for our mission target div.
   
    //document.getElementById("missionTarget").innerHTML = 
-  <><h2>Mission Destination</h2>
+
+  <><h2><b>Mission Destination</b></h2>
        <ol>
            <li>Name: ${json[index].name}</li>
            <li>Diameter: ${json[index].diameter}</li>
@@ -43,26 +44,26 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
               // planetsReturned = await fetch().then(function(response) );
 
-              planetsReturned = [];
-                let key = 0;
-                let index = 0;
-                for (json[key].index in json) {
+             //</img> planetsReturned = [];
+               // let key = 0;
+                //let index = 0;
+                //for (json[key].index in json) {
 
-                 planet = [
-                    json[key].name,
-                    json[key].diameter,
-                    json[key].star,
-                    json[key].distance,
-                    json[key].moons,
-                    json[key].imageUrl
-                ]
-                     planetsReturned[key] = planet;
+                // planet = [
+                   // json[key].name,
+                    //json[key].diameter,
+                    //json[key].star,
+                    //json[key].distance,
+                    //json[key].moons,
+                    //json[key].imageUrl
+                //]
+                    // planetsReturned[key] = planet;
 
-                    return planet;
-                    key = (key + 1) % json.length;
-             }             
-    });
-              return planetsReturned;
+                    //return planet;
+                   // key = (key + 1) % json.length;
+            // }             
+   });
+             // return planetsReturned;
                 
        // }
 
