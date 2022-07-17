@@ -73,7 +73,7 @@ import 'isomorphic-fetch';
                // let key = 0;
                 //let index = 0;
                 //for (json[key].index in json) {
-            // planet = [
+            // planet = []
             // json[key].name,
             //json[key].diameter,
             //json[key].star,
@@ -90,9 +90,7 @@ import 'isomorphic-fetch';
             //}
 
 
-            // function pickPlanet(planets)
-                let listedPlanets = 
-
+             function pickPlanet(planets) {
                 {
                     name: "Tatooine",
                     diameter: "10465 km",
@@ -110,6 +108,17 @@ import 'isomorphic-fetch';
                     image: "https://www.nasa.gov/sites/default/files/thumbnails/image/heic1916a.jpg",
                     moons: "unknown"
                  },
+                 {
+                    name: "Pern",
+                    diameter: "measurement is under dispute",
+                    star: "Alpha Sagittarius (a.k.a. Rukbat)",
+                    distance: "Varies - find a library",
+                    image: "https://www.nasa.gov/centers/langley/images/content/698148main_Brains_904_2.jpg",
+                    moons: 2
+                    },
+            };
+
+                var item = items[Math.floor(Math.random()*items.length)];
 
               // module.exports.addDestinationInfo = addDestinationInfo;
               // module.exports.validateInput = validateInput;
