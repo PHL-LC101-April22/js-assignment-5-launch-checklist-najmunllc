@@ -31,14 +31,36 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
                //function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
 
-        <form method="POST" action="">
-            <label>Pilot <input type="text" name="pilotName"></label>
-            <label>Co-Pilot <input type="text" name="copilotName"></label>
-            <label>Fuel Level <input type="number" name="fuelLevel"></label>
-            <label>Cargo Mass <input type="number" name="cargoWeight"></label>
-               
-        </form>
-                <button id="update">Submit</button> 
+               <div id="launchForm">
+            <form data-testid="testForm">
+                <div class="formField">
+                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName"/></label>
+                </div>
+                <div class="formField">
+                    <label>Co-pilot Name <input type="text" name="copilotName"/></label>
+                </div>
+                <div class="formField">
+                    <label>Fuel Level (L) <input type="text" name="fuelLevel"/></label> 
+                </div>
+                <div class="formField">
+                    <label>Cargo Mass (kg) <input type="text" name="cargoMass"/></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+            </form>
+              </div>
+
+              <div id="launchStatusCheck">
+                <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
+              <div  id="faultyItems" data-testid="faultyItems">
+                <ol>
+                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
+                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
+                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
+                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
+                </ol>
+              </div>
+              </div>
+                
 
               // async function myFetch() {let} planetsReturned;
 
@@ -62,10 +84,10 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                     //return planet;
                    // key = (key + 1) % json.length;
             // }             
-   });
+   //});
              // return planetsReturned;
                 
-       // }
+       //}
 
               // function pickPlanet(planets)
 
