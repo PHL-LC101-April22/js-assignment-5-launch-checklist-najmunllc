@@ -1,66 +1,69 @@
 // Write your helper functions here!
-('isomorphic-fetch');
+import 'isomorphic-fetch';
+<><style>
+    function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
+        // Here is the HTML formatting for our mission target div.
+        document.getElementById("missionTarget").innerHTML = Destination()};
 
-function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
-   // Here is the HTML formatting for our mission target div.
-  
-   //document.getElementById("missionTarget").innerHTML = 
+    }
+</style>
+<><h2><b>Mission Destination</b></h2>
+        <ol type="1">
+            <li>Name: ${json[index].name}</li>
+            <li>Diameter: ${json[index].diameter}</li>
+            <li>Star: ${star}</li>
+            <li>Distance from Earth: ${json[index].distance}</li>
+            <li>Number of Moons: ${json[index].moons}</li>
+        </ol>
+        <img src="Moon_image.jpeg">
 
-  <><h2><b>Mission Destination</b></h2>
-       <ol>
-           <li>Name: ${json[index].name}</li>
-           <li>Diameter: ${json[index].diameter}</li>
-           <li>Star: ${star}</li>
-           <li>Distance from Earth: ${json[index].distance}</li>
-           <li>Number of Moons: ${json[index].moons}</li>
-       </ol>
-            <img src="Moon_image.jpeg">
 
-    
 
               // function validateInput(testInput)
 
-        <script>
+            <script>
                 window.addEventListener("load", function() {
                 let form = document.querySelector("form");
                 form.addEventListener("submit", function(event) {
-                    alert("submit clicked");
-                 });
+                let pilotNameInput = document.querySelector("input[name=pilotName]");
+                let coPilotNameInput = document.querySelector("input[name=copilotName]");
+                let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
+                let cargoMassInput = document.querySelector("input[name=cargoWeight]");
+                if (pilotNameInput.value === "" || copilotNameInput.value === "") 
+                if (fuelLevelInput.value === "" || cargoMassInput.value === "")
+
+                {alert("All Field are required")};
+            
+                // stop the form submission
+                event.preventDefault();
+                
+              });
             });
-        </script>
+            </script>
+
+
 
                //function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
 
-               <div id="launchForm">
-            <form data-testid="testForm">
-                <div class="formField">
-                    <label>Pilot Name <input type="text" name="pilotName" id="pilotName"/></label>
-                </div>
-                <div class="formField">
-                    <label>Co-pilot Name <input type="text" name="copilotName"/></label>
-                </div>
-                <div class="formField">
-                    <label>Fuel Level (L) <input type="text" name="fuelLevel"/></label> 
-                </div>
-                <div class="formField">
-                    <label>Cargo Mass (kg) <input type="text" name="cargoMass"/></label>
-                </div>
-                <button id="formSubmit">Submit</button>
+            <form method="POST" action="https://handlers.education.launchcode.org/static/planets.json">
+                <label>Pilot <input type="text" name="pilotName"></label>
+                <label>Co-Pilot <input type="date" name="copilotName"></label>
+                <label>Fuel Level <input type="number" name="fuelLevel"></label>
+                <label>Cargo Mass <input type="number" name="cargoWeight"></label>
             </form>
-              </div>
+            <button id="update">Run Simulation</button>
+            <div id="launchStatusCheck">
+                <h2 id="launchStatus">Awaiting Information Before Launch</h2>
+                <div id="faultyItems">
+                    <ol>
+                        <li id="pilotStatus">Pilot Ready</li>
+                        <li id="copilotStatus">Co-pilot Ready</li>
+                        <li id="fuelStatus">Fuel level high enough for launch</li>
+                        <li id="cargoStatus">Cargo weight low enough for launch</li>
+                    </ol>
+                </div>
+            </div>
 
-              <div id="launchStatusCheck">
-                <h2 id="launchStatus" data-testid="launchStatus">Awaiting Information Before Launch</h2>
-              <div  id="faultyItems" data-testid="faultyItems">
-                <ol>
-                    <li id="pilotStatus" data-testid="pilotStatus">Pilot Ready</li>
-                    <li id="copilotStatus" data-testid="copilotStatus">Co-pilot Ready</li>
-                    <li id="fuelStatus" data-testid="fuelStatus">Fuel level high enough for launch</li>
-                    <li id="cargoStatus" data-testid="cargoStatus">Cargo mass low enough for launch</li>
-                </ol>
-              </div>
-              </div>
-                
 
               // async function myFetch() {let} planetsReturned;
 
@@ -70,26 +73,43 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                // let key = 0;
                 //let index = 0;
                 //for (json[key].index in json) {
-
-                // planet = [
-                   // json[key].name,
-                    //json[key].diameter,
-                    //json[key].star,
-                    //json[key].distance,
-                    //json[key].moons,
-                    //json[key].imageUrl
-                //]
-                    // planetsReturned[key] = planet;
-
-                    //return planet;
-                   // key = (key + 1) % json.length;
+            // planet = [
+            // json[key].name,
+            //json[key].diameter,
+            //json[key].star,
+            //json[key].distance,
+            //json[key].moons,
+            //json[key].imageUrl
+            //]
+            // planetsReturned[key] = planet;
+            //return planet;
+            // key = (key + 1) % json.length;
             // }             
-   //});
-             // return planetsReturned;
-                
-       //}
+            //});
+            // return planetsReturned;
+            //}
 
-              // function pickPlanet(planets)
+
+            // function pickPlanet(planets)
+                let listedPlanets = 
+
+                {
+                    name: "Tatooine",
+                    diameter: "10465 km",
+                    star: "Tatoo I & Tatoo II",
+                    distance: "43000 light years from galactic core",
+                    image: "https://www.nasa.gov/sites/default/files/images/587837main_Kepler16_transit_art2_full.jpg",
+                    moons: 3
+                    },
+
+                {
+                    name: "K2-18b",
+                    diameter: "34500 km",
+                    star: "K2-18",
+                    distance: "110 light years from Earth",
+                    image: "https://www.nasa.gov/sites/default/files/thumbnails/image/heic1916a.jpg",
+                    moons: "unknown"
+                 },
 
               // module.exports.addDestinationInfo = addDestinationInfo;
               // module.exports.validateInput = validateInput;
